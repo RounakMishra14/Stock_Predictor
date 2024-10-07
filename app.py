@@ -91,7 +91,7 @@ st.markdown(
     .logo-container {{
         position: fixed;
         bottom: 10px;
-        right: 100px;
+        right: 180px;
         width: 150px; /* Adjust the size as needed */
         z-index: 100;
     }}
