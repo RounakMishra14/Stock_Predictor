@@ -16,7 +16,7 @@ start = '1900-01-01'
 end = datetime.datetime.today().strftime('%Y-%m-%d')
 
 
-st.title('Stock Analyzer')
+st.title('Stocket')
 
 user_input= st.text_input('Enter Stock Ticker', 'SBIN.NS')
 df=yf.download(user_input, start=start, end=end)
