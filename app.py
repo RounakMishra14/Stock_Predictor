@@ -9,6 +9,55 @@ import plotly.graph_objs as go
 
 import datetime
 
+import streamlit as st
+
+# Custom Header
+st.markdown(
+    f"""
+    <style>
+    .custom-header {{
+        font-size: 24px;
+        font-weight: bold;
+        color: #ffffff;
+        background-color: #098985;
+        padding: 10px;
+        border-radius: 5px;
+        text-align: center;
+    }}
+    </style>
+    <div class="custom-header">Stocket</div>
+    """,
+    unsafe_allow_html=True
+)
+
+# Inject custom CSS
+st.markdown(
+    f"""
+    <style>
+    /* Primary background color */
+    .stApp {{
+        background-color: #00fedc;
+    }}
+
+    /* Secondary background color */
+    .sidebar .sidebar-content {{
+        background-color: #208909;
+    }}
+
+    /* Text color */
+    h1, h2, h3, h4, h5, h6, p, label, .stTextInput, .stButton {{
+        color: #ffffff;
+    }}
+
+    /* Customize other elements if necessary */
+    .css-1d391kg, .css-18e3th9, .css-1d391kg, .css-145kmo2 {{
+        color: #ffffff;
+    }}
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 # Set start date to a very early date
 start = '1900-01-01'
 
@@ -16,7 +65,7 @@ start = '1900-01-01'
 end = datetime.datetime.today().strftime('%Y-%m-%d')
 
 
-st.title('Stocket')
+
 
 user_input= st.text_input('Enter Stock Ticker', 'SBIN.NS')
 df=yf.download(user_input, start=start, end=end)
