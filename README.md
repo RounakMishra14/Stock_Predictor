@@ -40,9 +40,12 @@ df = yf.download('SBIN.NS', start=start, end=end)
 
 ## 🧹 Data Preprocessing
 Before building the LSTM model, the dataset undergoes several preprocessing steps to transform the raw data into a format suitable for training. The following steps are carried out:
-###Splitting the dataset:
 ```Python
 data_trainning = pd.DataFrame(df['Close'][0:int(len(df)*0.70)])
 data_testing = pd.DataFrame(df['Close'][int(len(df)*0.70):int(len(df))])
 print(data_trainning.shape, data_testing.shape)
 ```
+The historical stock price data (df['Close']) is split into two parts:
+* Training Set: 70% of the data is used for training the model (data_trainning).
+* Testing Set: The remaining 30% is reserved for testing (data_testing).
+This split ensures that the model is trained on the majority of the data while keeping a portion unseen for evaluation.
