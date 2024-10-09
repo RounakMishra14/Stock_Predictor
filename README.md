@@ -104,5 +104,6 @@ Forecasting:
 Chart Visualization:
 An interactive chart displays stock price movements.
 Users can zoom in/out using a date range slider for detailed exploration.
+
 !(1.png)
 
