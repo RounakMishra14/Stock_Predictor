@@ -50,3 +50,22 @@ The historical stock price data (df['Close']) is split into two parts:
 * Testing Set: The remaining 30% is reserved for testing (data_testing).
   
 This split ensures that the model is trained on the majority of the data while keeping a portion unseen for evaluation.
+```
+scaler = MinMaxScaler(feature_range=(0, 1))
+data_trainning_array = scaler.fit_transform(data_trainning)
+data_trainning_array
+```
+The training data is scaled to a range between 0 and 1 using MinMaxScaler. Normalizing the data helps the LSTM model converge faster and perform better since it reduces the variance and scales all values uniformly.
+```
+x_train = []
+y_train = []
+for i in range(100, data_trainning_array.shape[0]):
+    x_train.append(data_trainning_array[i-100:i])
+    y_train.append(data_trainning_array[i, 0])
+x_train, y_train = np.array(x_train), np.array(y_train)
+```
+The training dataset is structured by creating sequences of 100 days (x_train) to predict the next day’s closing price (y_train).
+* Sliding Window: A window of 100 consecutive closing prices is used to predict the price at the next time step.
+* Feature and Target Arrays: The feature array (x_train) holds sequences of the past 100 days, while the target array (y_train) contains the next day's price for each sequence.
+  
+The x_train and y_train arrays are then converted into NumPy arrays, making them compatible with the LSTM model’s input requirements.
