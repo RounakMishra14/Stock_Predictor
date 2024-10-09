@@ -48,4 +48,5 @@ print(data_trainning.shape, data_testing.shape)
 The historical stock price data (df['Close']) is split into two parts:
 * Training Set: 70% of the data is used for training the model (data_trainning).
 * Testing Set: The remaining 30% is reserved for testing (data_testing).
+  
 This split ensures that the model is trained on the majority of the data while keeping a portion unseen for evaluation.
