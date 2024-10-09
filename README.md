@@ -101,6 +101,10 @@ Forecasting:
 
 ## 🖥️ App Features
 
+The text input allows the user to interactively input a stock ticker symbol within the Streamlit app.
+
+![](3.png)
+
 Chart Visualization:
 
 An interactive chart displays stock price movements.
