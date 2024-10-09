@@ -16,4 +16,24 @@
 10. [License](#license)
 11. [Contact](#contact)
 
-The data collection process utilizes the yfinance library, and for the selected stock ticker, the maximum available historical data has been collected from the earliest available date up to today.
+## 📘 Overview
+
+Stocket uses historical stock data to build and deploy a predictive model that helps users visualize and predict stock price movements. It incorporates advanced data visualization and machine learning techniques, providing an easy-to-use interface for market analysis.
+
+The project is built using:
+- **Frontend**: [Streamlit](https://streamlit.io/)
+- **Modeling**: [Keras](https://keras.io/) LSTM Neural Network
+- **Data Source**: [yfinance](https://pypi.org/project/yfinance/)
+- **Visualization**: [Plotly](https://plotly.com/) and [Matplotlib](https://matplotlib.org/)
+
+## 📈 Data Collection Process
+
+The data collection process utilizes the `yfinance` library, which pulls historical stock data for the selected stock ticker. To ensure the maximum available data is collected:
+```python
+# Set start date to a very early date
+start = '1900-01-01'
+
+# Set end date to today's date
+end = datetime.datetime.today().strftime('%Y-%m-%d')
+df = yf.download('SBIN.NS', start=start, end=end)
+
