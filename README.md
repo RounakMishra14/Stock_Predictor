@@ -37,3 +37,5 @@ start = '1900-01-01'
 end = datetime.datetime.today().strftime('%Y-%m-%d')
 df = yf.download('SBIN.NS', start=start, end=end)
 
+## 🧹 Data Preprocessing
+Before building the LSTM model, the dataset undergoes several preprocessing steps to transform the raw data into a format suitable for training. The following steps are carried out:
