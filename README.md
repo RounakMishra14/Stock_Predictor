@@ -69,3 +69,32 @@ The training dataset is structured by creating sequences of 100 days (x_train) t
 * Feature and Target Arrays: The feature array (x_train) holds sequences of the past 100 days, while the target array (y_train) contains the next day's price for each sequence.
   
 The x_train and y_train arrays are then converted into NumPy arrays, making them compatible with the LSTM model’s input requirements.
+
+## 🧠 LSTM Model Building
+The LSTM model is designed to predict stock prices based on historical closing prices.
+
+Model Architecture:
+
+The LSTM model comprises multiple layers:
+* Four LSTM layers with dropout layers in between to prevent overfitting.
+* A dense layer at the end to output a single prediction value.
+
+```
+model = Sequential()
+model.add(LSTM(units=50, activation='relu', return_sequences=True, input_shape=(x_train.shape[1], 1)))
+model.add(Dropout(0.2))
+model.add(LSTM(units=60, activation='relu', return_sequences=True))
+model.add(Dropout(0.3))
+model.add(LSTM(units=80, activation='relu', return_sequences=True))
+model.add(Dropout(0.4))
+model.add(LSTM(units=120, activation='relu'))
+model.add(Dropout(0.5))
+model.add(Dense(units=1))
+```
+
+Training:
+* The model is compiled using the adam optimizer and mean_squared_error as the loss function.
+It is trained for 50 epochs, with the performance evaluated using the testing set.
+
+Forecasting:
+* The model forecasts the next 15 days of closing prices based on user-selected stock data.
