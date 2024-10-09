@@ -102,37 +102,37 @@ Forecasting:
 
 The text input allows the user to interactively input a stock ticker symbol within the Streamlit app.
 
-![](3.png)
+![](assests/3.png)
 
 Chart Visualization:
 
 An interactive chart displays stock price movements.
 Users can zoom in/out using a date range slider for detailed exploration.
 
-![](1.png)
+![](assests/1.png)
 
-![](2.png)
+![](assests/2.png)
 
 Moving Averages: 
 
 Shows the average stock price over specified periods (100 and 200 days) to identify trends.
-![](4.png)
+![](assests/4.png)
 
 Relative Strength Index (RSI): 
 
 Evaluates the magnitude of recent price changes to detect overbought (above 70) or oversold (below 30) conditions.
-![](5.png)
+![](assests/5.png)
 
 MACD: 
 
 Calculates the difference between short-term (12-day) and long-term (26-day) exponential moving averages to find momentum.
-![](6.png)
+![](assests/6.png)
 
 The LSTM model is trained on 70% of the historical data, and the remaining 30% is used for testing. The model’s predictions for this testing dataset are plotted alongside the actual prices.
-![](7.png)
+![](assests/7.png)
 
 Forecasted Price Trend for 15 Days:
 This plot shows the stock’s projected closing prices for the next 15 days based on the LSTM model’s output. 
-![](8.png)
-![](9.png)
+![](assests/8.png)
+![](assests/9.png)
 
