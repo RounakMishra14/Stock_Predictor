@@ -5,16 +5,11 @@
 ## 📋 Table of Contents
 
 1. [Overview](#overview)
-2. [Data Collection Process](#data-collection-process)
-3. [LSTM Model Building](#lstm-model-building)
-4. [App Features](#app-features)
-5. [Technical Indicators](#technical-indicators)
-6. [Installation](#installation)
-7. [Usage](#usage)
-8. [Project Structure](#project-structure)
-9. [Future Enhancements](#future-enhancements)
-10. [License](#license)
-11. [Contact](#contact)
+2. [Demo](#Demo)
+3. [Data Collection Process](#data-collection-process)
+4. [LSTM Model Building](#lstm-model-building)
+5. [App Features](#app-features)
+
 
 ## 📘 Overview
 
@@ -25,6 +20,10 @@ The project is built using:
 - **Modeling**: [Keras](https://keras.io/) LSTM Neural Network
 - **Data Source**: [yfinance](https://pypi.org/project/yfinance/)
 - **Visualization**: [Plotly](https://plotly.com/) and [Matplotlib](https://matplotlib.org/)
+
+## 🌐 Demo
+
+Try the live demo here: [Stocket - Stock Prediction App](https://stocket.streamlit.app)
 
 ## 📈 Data Collection Process
 
