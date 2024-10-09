@@ -98,3 +98,10 @@ It is trained for 50 epochs, with the performance evaluated using the testing se
 
 Forecasting:
 * The model forecasts the next 15 days of closing prices based on user-selected stock data.
+
+## 🖥️ App Features
+
+Chart Visualization:
+
+An interactive chart displays stock price movements.
+Users can zoom in/out using a date range slider for detailed exploration.
